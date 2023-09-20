@@ -18,4 +18,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', [IndexController::class, 'index']);
 Route::get('/show', [IndexController::class, 'show']);
 
-Route::get('overview', ResourceController::class)->only(['index']);
+Route::get('overview', [ResourceController::class, 'index'])->name('overview.index');
+
