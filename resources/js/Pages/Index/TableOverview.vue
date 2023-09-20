@@ -1,265 +1,56 @@
 <script>
-
 export default {
+    props: {
+        resource: Array,
+    },
     name: "EsdTableOverview",
-    data: function () {
+    data() {
         return {
             usersPerPage: 3,
             currentPage: 1,
-            users: [
-                {
-                    name: 'ABRANTES1, RUSTY RELAMPAGOS',
-                    nick: 'Rusty',
-                    カタカナ名: 'アブランテス、ラスティ・リランパゴス',
-                    resume: '',
-                    dateHired: '2023/8/7',
-                    rate: '',
-                    ibmRate: '',
-                    ubicomRate: '',
-                    poUntil: '',
-                    action: 'Z6',
-                    yoePreAws: '',
-                    yoe: '0.1',
-                    techCert: '',
-                    coreSkills: '',
-                    subSkill5: '',
-                    subSkill4: '',
-                    subSkill3: '',
-                    subSkill2: '',
-                    subSkill1: '',
-                    nihonggo: '',
-                    Postn: 'JR',
-                    buOff: 'DEVG',
-                    buAss: 'DEVG',
-                    project: 'AWS',
-                    currentAssignment: 'DEVG GEN',
-                    candidateFor: '',
-                    loc: 'OFFSHORE',
-                    email: '',
-                    mainSkill: '',
-                    subSkill: '',
-                    focusSkill: '',
-                    loc1: '',
-                    loc2: '',
-                    contact: '',
-                    passportExpDate: '1',
-                    remarks: ''
-                },
-                {
-                    name: 'ABRANTES2, RUSTY RELAMPAGOS',
-                    nick: 'Rusty',
-                    カタカナ名: 'アブランテス、ラスティ・リランパゴス',
-                    resume: '',
-                    dateHired: '2023/8/7',
-                    rate: '',
-                    ibmRate: '',
-                    ubicomRate: '',
-                    poUntil: '',
-                    action: 'Z6',
-                    yoePreAws: '',
-                    yoe: '0.1',
-                    techCert: '',
-                    coreSkills: '',
-                    subSkill5: '',
-                    subSkill4: '',
-                    subSkill3: '',
-                    subSkill2: '',
-                    subSkill1: '',
-                    nihonggo: '',
-                    Postn: 'JR',
-                    buOff: 'DEVG',
-                    buAss: 'DEVG',
-                    project: 'AWS',
-                    currentAssignment: 'DEVG GEN',
-                    candidateFor: '',
-                    loc: 'OFFSHORE',
-                    email: '',
-                    mainSkill: '',
-                    subSkill: '',
-                    focusSkill: '',
-                    loc1: '',
-                    loc2: '',
-                    contact: '',
-                    passportExpDate: '1',
-                    remarks: ''
-                },
-                {
-                    name: 'ABRANTES3, RUSTY RELAMPAGOS',
-                    nick: 'Rusty',
-                    カタカナ名: 'アブランテス、ラスティ・リランパゴス',
-                    resume: '',
-                    dateHired: '2023/8/7',
-                    rate: '',
-                    ibmRate: '',
-                    ubicomRate: '',
-                    poUntil: '',
-                    action: 'Z6',
-                    yoePreAws: '',
-                    yoe: '0.1',
-                    techCert: '',
-                    coreSkills: '',
-                    subSkill5: '',
-                    subSkill4: '',
-                    subSkill3: '',
-                    subSkill2: '',
-                    subSkill1: '',
-                    nihonggo: '',
-                    Postn: 'JR',
-                    buOff: 'DEVG',
-                    buAss: 'DEVG',
-                    project: 'AWS',
-                    currentAssignment: 'DEVG GEN',
-                    candidateFor: '',
-                    loc: 'OFFSHORE',
-                    email: '',
-                    mainSkill: '',
-                    subSkill: '',
-                    focusSkill: '',
-                    loc1: '',
-                    loc2: '',
-                    contact: '',
-                    passportExpDate: '1',
-                    remarks: ''
-                },
-                {
-                    name: 'ABRANTES4, RUSTY RELAMPAGOS',
-                    nick: 'Rusty',
-                    カタカナ名: 'アブランテス、ラスティ・リランパゴス',
-                    resume: '',
-                    dateHired: '2023/8/7',
-                    rate: '',
-                    ibmRate: '',
-                    ubicomRate: '',
-                    poUntil: '',
-                    action: 'Z6',
-                    yoePreAws: '',
-                    yoe: '0.1',
-                    techCert: '',
-                    coreSkills: '',
-                    subSkill5: '',
-                    subSkill4: '',
-                    subSkill3: '',
-                    subSkill2: '',
-                    subSkill1: '',
-                    nihonggo: '',
-                    Postn: 'JR',
-                    buOff: 'DEVG',
-                    buAss: 'DEVG',
-                    project: 'AWS',
-                    currentAssignment: 'DEVG GEN',
-                    candidateFor: '',
-                    loc: 'OFFSHORE',
-                    email: '',
-                    mainSkill: '',
-                    subSkill: '',
-                    focusSkill: '',
-                    loc1: '',
-                    loc2: '',
-                    contact: '',
-                    passportExpDate: '1',
-                    remarks: ''
-                },
-                {
-                    name: 'ABRANTES5, RUSTY RELAMPAGOS',
-                    nick: 'Rusty',
-                    カタカナ名: 'アブランテス、ラスティ・リランパゴス',
-                    resume: '',
-                    dateHired: '2023/8/7',
-                    rate: '',
-                    ibmRate: '',
-                    ubicomRate: '',
-                    poUntil: '',
-                    action: 'Z6',
-                    yoePreAws: '',
-                    yoe: '0.1',
-                    techCert: '',
-                    coreSkills: '',
-                    subSkill5: '',
-                    subSkill4: '',
-                    subSkill3: '',
-                    subSkill2: '',
-                    subSkill1: '',
-                    nihonggo: '',
-                    Postn: 'JR',
-                    buOff: 'DEVG',
-                    buAss: 'DEVG',
-                    project: 'AWS',
-                    currentAssignment: 'DEVG GEN',
-                    candidateFor: '',
-                    loc: 'OFFSHORE',
-                    email: '',
-                    mainSkill: '',
-                    subSkill: '',
-                    focusSkill: '',
-                    loc1: '',
-                    loc2: '',
-                    contact: '',
-                    passportExpDate: '1',
-                    remarks: ''
-                },
-                {
-                    name: 'ABRANTES6, RUSTY RELAMPAGOS',
-                    nick: 'Rusty',
-                    カタカナ名: 'アブランテス、ラスティ・リランパゴス',
-                    resume: '',
-                    dateHired: '2023/8/7',
-                    rate: '',
-                    ibmRate: '',
-                    ubicomRate: '',
-                    poUntil: '',
-                    action: 'Z6',
-                    yoePreAws: '',
-                    yoe: '0.1',
-                    techCert: '',
-                    coreSkills: '',
-                    subSkill5: '',
-                    subSkill4: '',
-                    subSkill3: '',
-                    subSkill2: '',
-                    subSkill1: '',
-                    nihonggo: '',
-                    Postn: 'JR',
-                    buOff: 'DEVG',
-                    buAss: 'DEVG',
-                    project: 'AWS',
-                    currentAssignment: 'DEVG GEN',
-                    candidateFor: '',
-                    loc: 'OFFSHORE',
-                    email: '',
-                    mainSkill: '',
-                    subSkill: '',
-                    focusSkill: '',
-                    loc1: '',
-                    loc2: '',
-                    contact: '',
-                    passportExpDate: '1',
-                    remarks: ''
-                },
-            ]
-        }
+        };
     },
-
     computed: {
         paginatedUsers() {
             const startIndex = (this.currentPage - 1) * this.usersPerPage;
             const endIndex = startIndex + this.usersPerPage;
 
-            return this.users.slice(startIndex, endIndex);
+            // Check if resource is an array before slicing it
+            if (Array.isArray(this.resource)) {
+                return this.resource.slice(startIndex, endIndex);
+            } else {
+                return [];
+            }
         },
         totalPages() {
-            return Math.ceil(this.users.length / this.usersPerPage);
-        }
+            // Check if resource is an array before calculating total pages
+            if (Array.isArray(this.resource)) {
+                return Math.ceil(this.resource.length / this.usersPerPage);
+            } else {
+                return 0;
+            }
+        },
     },
-
+    watch: {
+        // Watch for changes in the 'resource' prop and update 'users'
+        resource(newResource) {
+            if (Array.isArray(newResource)) {
+                this.users = newResource;
+            } else {
+                this.users = [];
+            }
+        },
+    },
     methods: {
         goToPage(page) {
             if (page >= 1 && page <= this.totalPages) {
                 this.currentPage = page;
             }
-        }
-    }
-}
+        },
+    },
+};
 </script>
+
 
 
 <template>

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\resourceMain;
 use Illuminate\Http\Request;
 
 class ResourceController extends Controller
@@ -11,7 +12,9 @@ class ResourceController extends Controller
      */
     public function index()
     {
-        return inertia('Index/TableOverview');
+        return inertia('Index/TableOverview', [
+            'resource'=>resourceMain::all()
+        ]);
     }
 
     /**
